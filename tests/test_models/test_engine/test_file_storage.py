@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""unittest for the FileStorage class
+"""The program contains a unittest for the FileStorage class
 """
 import json
 import os
@@ -17,7 +17,7 @@ class TestFileStorage(unittest.TestCase):
     """
 
     def testException(self):
-        """Tests the arguments of the save function
+        """The func Tests the arguments of the save function
         """
         output = "save() takes 1 positional argument but 2 were given"
         with self.assertRaises(TypeError) as err:
@@ -25,22 +25,19 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(str(err.exception), output)
 
     def testFileStorageAttr(self):
-        """Checks if the FileStorage class has the attr __file_path
-        and __objects
+        """the func Checks if the FileStorage class has the attr
         """
         self.assertEqual(hasattr(FileStorage, '_FileStorage__file_path'), True)
         self.assertEqual(hasattr(FileStorage, '_FileStorage__objects'), True)
 
     def testStorageInstance(self):
-        """Checks if storage is an instance of FileStorage
+        """The func Checks if storage is an instance of FileStorage
         """
         my_model = BaseModel()
         self.assertIsInstance(storage, FileStorage)
 
     def testAll(self):
-        """Checks if the All method contains Keys and
-        if created_at and updated_at for 2 different instances,
-        if they are the same
+        """The func Checks if the All method contains Keys
         """
         my_model = BaseModel()
         my_model.name = "First Model"
@@ -66,8 +63,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(dict['name'], "Second Model")
 
     def test_new(self):
-        """checks if the to_dicts method key, is the same as when
-        deserialize json file to object and get the key
+        """ The func checks if the to_dicts method key,
         """
         my_model = BaseModel()
         dict = my_model.to_dict()
@@ -80,8 +76,7 @@ class TestFileStorage(unittest.TestCase):
             self.assertEqual(dict[i], values[i])
 
     def testReload(self):
-        """Checks if the path of the __filepath exists and
-        if the All method's objects are the same as the __objects
+        """ The func Checks if the path of the __filepath exists
         """
         my_model = BaseModel()
         my_model.save()
@@ -94,7 +89,7 @@ class TestFileStorage(unittest.TestCase):
             self.assertEqual(objs[key].to_dict(), value.to_dict())
 
     def testSave(self):
-        """Checks if the storage.all and __objects are the same
+        """The func will Check for the storage
         """
         self.assertEqual(os.path.exists(storage._FileStorage__file_path), True)
         self.assertEqual(storage.all(), storage._FileStorage__objects)

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the tests for BaseModel class
+"""This program contains the tests for BaseModel class
 """
 import datetime
 from io import StringIO
@@ -9,12 +9,12 @@ from models.base_model import BaseModel
 
 
 class TestBaseClass(unittest.TestCase):
-    """ This class contains the definition of
+    """ This class contains the meaning of
     the unittest for the BaseClass
     """
 
     def test_init(self):
-        """Checks the init method variables
+        """ This func Checks the init method variables
         """
         my_model = BaseModel()
         my_model.name = "First Model"
@@ -27,7 +27,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(my_model.id, my_model_json['id'])
 
     def test_diff_object_time(self):
-        """Tests update and created times for different objects
+        """This func Tests the update and creates time for diff objects
         """
         my_model1 = BaseModel()
         my_model1.name = "First"
@@ -46,7 +46,7 @@ class TestBaseClass(unittest.TestCase):
             my_model1.updated_at, my_model2.updated_at)
 
     def test_kwargs(self):
-        """Tests passing a dic in init method
+        """This Tests is  passing a dictionary in init method
         """
         my_model = BaseModel()
         my_model.name = "First"

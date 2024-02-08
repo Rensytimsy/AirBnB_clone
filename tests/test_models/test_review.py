@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the unittest TestCase
+"""This program will contain the unittest TestCase
 for Review
 """
 import unittest
@@ -9,17 +9,17 @@ from models.review import Review
 
 
 class TestReview(unittest.TestCase):
-    """Tests for the Review class
+    """This func will test for the Review class
     """
 
     def test_instance(self):
-        """Tests for Review's Instance
+        """This func will Test for Review's Instance
         """
         first_review = Review()
         self.assertIsInstance(first_review, Review)
 
     def test_attributes(self):
-        """Tests if Review has the defined attributes
+        """This func will Test  if Review has the defined attributes
         """
         first_review = Review()
         self.assertTrue(hasattr(first_review, "place_id"))
@@ -30,7 +30,7 @@ class TestReview(unittest.TestCase):
         self.assertIsInstance(first_review.text, str)
 
     def test_class_name(self):
-        """Checks the type for Review instance
+        """This func Checks the type for Review instance
         """
         first_review = Review()
         self.assertEqual(str(type(first_review)),

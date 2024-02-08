@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the unittest TestCase
+"""This program will contain the unittest TestCase
 for Amenity
 """
 import unittest
@@ -9,17 +9,17 @@ from models.place import Place
 
 
 class TestPlace(unittest.TestCase):
-    """Tests for the Place class
+    """This class will test for the Place class
     """
 
     def test_instance(self):
-        """Tests for Place's Instance
+        """This func will Test for Place's Instance
         """
         first_place = Place()
         self.assertIsInstance(first_place, Place)
 
     def test_attributes(self):
-        """Tests if Place has the defined attributes
+        """ This func will Test if Place has the defined attributes
         """
         first_place = Place()
         self.assertTrue(hasattr(first_place, "city_id"))
@@ -46,7 +46,7 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(first_place.amenity_ids, list)
 
     def test_class_name(self):
-        """Checks the type for Place instance
+        """This func will Check if the type for Place instance
         """
         firstPlace = Place()
         self.assertEqual(str(type(firstPlace)),
