@@ -1,17 +1,17 @@
 header {
-    background-color: #fff;
-    color: white;
+    background-color: #FFF;
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
-
-.logo {
-    margin-left: 20px;
-    width: 140px;
-    height: 59px;
+.logo{
+    width: 142px;
+    height: 60px;
     background-image: url("../images/logo.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
