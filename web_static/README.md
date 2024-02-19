@@ -1,0 +1,1 @@
+Webstatic folder basically represents the console application online
